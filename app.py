@@ -30,9 +30,9 @@ def start():
                                 tw.post_tweet_with_media(message, dms[i]['media'],dms[i]['shorted_media_url'], dms[i]['type'])
                                 tw.delete_dm(id)
                         else:
-                            if ".quotem" in message and "https://" not in message and "http://" not in message
-								message = message.replace(".quotem", "[Kudus Quote]")
-                                if	len(message) is not 0 and dms[i]['media'] is None::
+                            if ".quotem" in message:
+                                if "https://" not in message and "http://" not in message:
+                                    message = message.replace(".quotem", "[Kudus Quote]")
                                     screen_name = tw.get_user_screen_name(sender_id)
                                     media.download_image()
                                     media.process_image(message, screen_name)
