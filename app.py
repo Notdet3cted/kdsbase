@@ -31,8 +31,8 @@ def start():
                                 tw.post_tweet_with_media(message, dms[i]['media'],dms[i]['shorted_media_url'], dms[i]['type'])
                                 tw.delete_dm(id)
                         else:
-							if "https://" not in message and "http://" not in message:
-								if ".quotem" in message:
+							if ".quotem" in message:
+								if "https://" not in message and "http://" not in message:
 									if len(message) is not 0:
 										if dms[i]['media'] is None:
 											print("DM will be posted")
