@@ -33,8 +33,8 @@ def start():
                         else:
                             print("DM deleted because its empty..")
                             tw.delete_dm(id)
-                    else:
-						if "#quotem" in message:
+                    
+						elif "#quotem" in message:
 							if "https://" not in message and "http://" not in message:
 								message = message.replace(".quotem", "[Kudus Quote]")
 								if dms[i]['media'] is None:
