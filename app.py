@@ -3,6 +3,7 @@ import time
 from media import Media
 
 #test pancing ke heroku supaya keluar dyno
+#test2
 
 tw = Twitter()
 media = Media()
