@@ -1,11 +1,10 @@
 from twitter import Twitter
 import time
-from media import Media
 
-#test
-
+#test pancing ke heroku supaya keluar dyno
+#test kedua pancing worker supaya muncul...
+#test lagi
 tw = Twitter()
-media = Media()
 
 def start():
     print("Starting program...")
@@ -34,27 +33,8 @@ def start():
                             print("DM deleted because its empty..")
                             tw.delete_dm(id)
                     else:
-                        if "#quotem" in message:
-                            if "https://" not in message and "http://" not in message:
-                                message = message.replace(".quotem", "[Kudus Quote]")
-                                if dms[i]['media'] is None:
-                                    print("DM will be posted")
-                                    screen_name = tw.get_user_screen_name(sender_id)
-                                    media.download_image()
-                                    media.process_image(message, screen_name)
-                                    tw.post_quote()
-                                    tw.delete_dm(id)
-                                else:
-                                    media.download_image()
-                                    media.process_image(message, None)
-                                    tw.post_quote()
-                                    tw.delete_dm(id)
-                            else:
-                                print("DM deleted...")
-                                tw.delete_dm(id)            
-                        else:
-                            print("DM will be deleted because does not contains keyword..")
-                            tw.delete_dm(id)
+                        print("DM will be deleted because does not contains keyword..")
+                        tw.delete_dm(id)
 
             dms = list()
 
