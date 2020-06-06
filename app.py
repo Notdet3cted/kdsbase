@@ -18,7 +18,7 @@ def start():
 
                 if len(message) is not 0 and len(message) < 280:
                     if "#menfessem" in message.lower():
-                        message = message.replace("#menfessem", "/𝙺𝚞𝚍𝚞𝚜 𝙼𝚎𝚗𝚏𝚎𝚜𝚜/")
+                        message = message.replace("#menfessem", "[𝙺𝚞𝚍𝚞𝚜 𝙼𝚎𝚗𝚏𝚎𝚜𝚜]")
                         if len(message) is not 0:
                             if dms[i]['media'] is None:
                                 print("DM will be posted")
